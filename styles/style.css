@@ -1,0 +1,128 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+/* global style  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Gray);
+  user-select: none;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+/* project css */
+
+.container{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 255, .2);
+}
+
+.card{
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.card-1{
+  grid-area: 1/1/2/3;
+  background-color: white;
+  
+}
+.card-1 h1{
+  color: var(--Cyan);
+  font-size: 1.5rem;
+}
+.card-1 h2{
+  color: var(--Bright-Yellow);
+  font-size: 1.15rem;
+}
+.card-1 p{
+  color: var(--Grayish-Blue);
+  line-height: 1.5rem;
+}
+.card-2{
+background-color: var(--Cyan);
+}
+
+.card-3{
+  background-color: var(--Cyan);
+  opacity: 0.75;
+}
+
+.card-2 h2, .card-3 h2{
+  color: white;
+  opacity: 0.85;
+  font-size: 1.15rem;
+}
+.card-2 p:not(.subscription), .card-3 p{
+  color: white;
+  opacity: 0.85;
+}
+.subscription{
+  color: var(--Light-Gray);
+}
+.card-2 p span{
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+.card-2 button{
+  border: none;
+  background-color: var(--Bright-Yellow);
+  height: 3rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* media queries */
+@media(max-width:1200px){
+  .container{
+    width: 75%;
+  }
+}
+
+
+@media(max-width:768px){
+  .container{
+    width:80%;
+    grid-template-columns: 1fr;
+  }
+  .card-1{
+    grid-area: 1/1/2/2;
+  }
+}
